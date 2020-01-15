@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 140px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-container > div {
+    flex: auto;
+}
+
+.no-flex {
+    flex: none !important;
+}

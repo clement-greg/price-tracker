@@ -1,0 +1,23 @@
+<button style="z-index: 2;" mat-button mat-raised-button color="primary" (click)="clickMe()">
+  <mat-icon>menu</mat-icon>
+</button>
+Here is my header
+
+<mat-sidenav-container class="example-container" *ngIf="shouldRun">
+  <mat-sidenav mode="side" opened>
+    <a mat-button class="drawer-link" routerLink="/home" (click)="shouldRun = false">
+      <mat-icon>home</mat-icon> Home
+    </a>
+
+    <a mat-button class="drawer-link" routerLink="/route2" (click)="shouldRun = false">
+      Route 2
+    </a>
+
+    <a mat-button class="drawer-link" routerLink="/test-page" (click)="shouldRun = false">Test Page</a>
+  </mat-sidenav>
+  <!-- <mat-sidenav-content>
+
+  </mat-sidenav-content> -->
+</mat-sidenav-container>
+
+<router-outlet></router-outlet>

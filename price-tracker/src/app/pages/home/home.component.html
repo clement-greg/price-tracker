@@ -1,0 +1,21 @@
+
+<div>
+    <mat-form-field>
+        <input matInput placeholder="New Test Name" [(ngModel)]="newTestName">
+    </mat-form-field>
+
+    <button mat-button mat-raised-button color="primary" [disabled]="!newTestName || saving" (click)="save()">
+        <mat-spinner *ngIf="saving"></mat-spinner>
+        Save</button>
+</div>
+
+<div>
+    <ul>
+        <li *ngFor="let testItem of testItems">{{testItem.name}} - {{testItem.id}}
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <button style="margin-left: 40px;" mat-button (click)="deleteItem(testItem)">Delete</button>
+        </li>
+    </ul>
+</div>

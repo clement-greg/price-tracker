@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "dotnet build price-tracker-api",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "build",
+                "${workspaceFolder}/price-tracker-api/price-tracker-api/price-tracker-api.csproj",
+                "/p:GenerateFullPaths=true",
+                "/clp:NoSummary"
+            ]
+        },
+        {
+            "type": "npm",
+            "script": "start",
+            "path": "price-tracker/",
+            "problemMatcher": []
+        }
+    ]
+}
